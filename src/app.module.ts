@@ -3,7 +3,8 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { LeadsModule } from './leads/leads.module';
-
+import { AsanaModule } from './asana/asana.module';
+import { PaymentModule } from './payment/payment.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -18,6 +19,8 @@ import { LeadsModule } from './leads/leads.module';
     }),
     AuthModule,
     LeadsModule,
+    AsanaModule,
+    PaymentModule
   ],
 })
 export class AppModule {}
